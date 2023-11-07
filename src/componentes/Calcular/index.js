@@ -47,12 +47,14 @@ function Calcula() {
 
   return (
     <div className='flex flex-col  justify-center'>
+      <p className='corBrancoTexto'>Peso</p>
       <input
       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mb-5"
         type="number"
         placeholder="Digite seu Peso / Ex: 90"
         onChange={(e) => setPeso(e.target.value)}
       />
+      <p className='corBrancoTexto'>Altura</p>
       <input
       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mb-5"
         type="number"
@@ -60,7 +62,7 @@ function Calcula() {
         onChange={(e) => setAltura(e.target.value)}
       />
       <button onClick={calculaIMC}
-      className="botao-com-cor border rounded-md font-mono mb-5"
+      className="botao-com-cor border rounded-md font-mono mb-5 p-3"
       >Calcular</button>
       {imc && <p className='corBrancoTexto mb-5'>{imc}</p>}
       {imagemIMC && <img src={imagemIMC} alt="Imagem do IMC" />}
